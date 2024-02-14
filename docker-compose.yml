@@ -7,12 +7,23 @@ services:
       - HOST=0.0.0.0
       - CHOKIDAR_USEPOLLING=true
     volumes:
-      - ./frontend/household_accounts:/usr/src/app
-      - node_modules:/usr/src/app/node_module
+      - ./frontend/src:/usr/src/frontend/app
+      - node_modules:/usr/src/frontend/app/node_module
     command: sh -c 'npm install && npm run dev'
     ports:
       - '3000:3000'
     tty: true
-
+  backend:
+    build: ./backend
+    volumes:
+      - ./backend/src/:/var/www/html
+  web:
+    build: ./web
+    ports:
+      - 8081:80
+    depends_on:
+      - backend
+    volumes:
+      - ./backend/src/:/var/www/html
 volumes:
   node_modules:
