@@ -2,10 +2,6 @@
 import FormInput from '../atoms/FormInput.vue';
 import PrimaryButton from '../atoms/PrimaryButton.vue';
 
-const props = defineProps({
-    label: { type: String, required: true}
-})
-
 const components = defineComponent({
     components: {
         FormInput,

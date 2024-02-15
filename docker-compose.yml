@@ -25,5 +25,18 @@ services:
       - backend
     volumes:
       - ./backend/src/:/var/www/html
+  db:
+    build: ./db
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: database
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+      TZ: 'Asia/Tokyo'
+    volumes:
+      - mysql-volume:/var/lib/mysql
 volumes:
   node_modules:
+  mysql-volume:
