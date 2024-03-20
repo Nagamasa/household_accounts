@@ -3,6 +3,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     'AtomsFormInput': typeof import("../components/atoms/FormInput.vue")['default']
     'AtomsPrimaryButton': typeof import("../components/atoms/PrimaryButton.vue")['default']
+    'MoleculesSlotTest': typeof import("../components/molecules/SlotTest.vue")['default']
     'OrganismsLoginForm': typeof import("../components/organisms/LoginForm.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
     'NuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
@@ -26,6 +27,7 @@ declare module 'vue' {
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'LazyAtomsFormInput': typeof import("../components/atoms/FormInput.vue")['default']
     'LazyAtomsPrimaryButton': typeof import("../components/atoms/PrimaryButton.vue")['default']
+    'LazyMoleculesSlotTest': typeof import("../components/molecules/SlotTest.vue")['default']
     'LazyOrganismsLoginForm': typeof import("../components/organisms/LoginForm.vue")['default']
     'LazyNuxtWelcome': typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
     'LazyNuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
@@ -52,6 +54,7 @@ declare module 'vue' {
 
 export const AtomsFormInput: typeof import("../components/atoms/FormInput.vue")['default']
 export const AtomsPrimaryButton: typeof import("../components/atoms/PrimaryButton.vue")['default']
+export const MoleculesSlotTest: typeof import("../components/molecules/SlotTest.vue")['default']
 export const OrganismsLoginForm: typeof import("../components/organisms/LoginForm.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
@@ -75,6 +78,7 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const LazyAtomsFormInput: typeof import("../components/atoms/FormInput.vue")['default']
 export const LazyAtomsPrimaryButton: typeof import("../components/atoms/PrimaryButton.vue")['default']
+export const LazyMoleculesSlotTest: typeof import("../components/molecules/SlotTest.vue")['default']
 export const LazyOrganismsLoginForm: typeof import("../components/organisms/LoginForm.vue")['default']
 export const LazyNuxtWelcome: typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
 export const LazyNuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
