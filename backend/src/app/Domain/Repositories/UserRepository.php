@@ -7,4 +7,5 @@ use App\Domain\Models\Users\User;
 interface UserRepository
 {
     public function save(User $user): ?User;
+    public function findByUser(String $email, String $password): ?User;
 }

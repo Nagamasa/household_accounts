@@ -19,4 +19,12 @@ class UsersDao implements UserRepository
 
         return new User($result->name, $result->email, $result->password, $result->id);
     }
+
+    public function findByUser(String $email, String $password): User
+    {
+        $result = EqUser::where('email', '=', $email)
+            ->first();
+        //dd($result);
+        return new User($result->name, $result->email, $result->password, $result->id);
+    }
 }

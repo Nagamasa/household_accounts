@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Domain\Models\Users\User;
 use App\Http\Controllers\Controller;
 use App\Application\UseCase\Users\CreateUser;
+use App\Application\UseCase\Users\SelectUser;
 use App\Domain\Repositories\UserRepository;
 
 class TestController extends Controller
@@ -18,9 +19,13 @@ class TestController extends Controller
 
     public function index()
     {
-        $user = new User('永野将志', 'nagano2@test.com', 'password', null);
-        $result = $this->userRepository->save($user);
-        //$result = $createUser->execute('永野将志', 'nagano@test.com', 'password');
+        // $result = (new CreateUser(
+        //     $this->userRepository
+        // ))->execute('永野将志', 'nagano5@test.com', 'password');
+
+        $result = (new SelectUser(
+            $this->userRepository
+        ))->execute('nagano5@test.com', 'password');
         dd($result);
     }
 }

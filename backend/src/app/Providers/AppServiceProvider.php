@@ -15,6 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        // ServiceLocatorパターン　こちらを差し替えることで依存解決先を柔軟に変更できる
         $this->app->bind(UserRepository::class, UsersDao::class);
     }
 

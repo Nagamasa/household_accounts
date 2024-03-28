@@ -5,7 +5,7 @@ namespace App\Application\UseCase\Users;
 use App\Domain\Models\Users\User;
 use App\Domain\Repositories\UserRepository;
 
-class CreateUser
+class SelectUser
 {
     private $userRepository;
 
@@ -14,14 +14,10 @@ class CreateUser
         $this->userRepository = $userRepository;
     }
     
-    public function execute(String $name, String $email, String $password)
+    public function execute(String $email, String $password)
     {
-        $user = new User($name, $email, $password, null);
-
         // 重複チェック
-
-
-        $result = $this->userRepository->save($user);
+        $result = $this->userRepository->findByUser($email, $password);
 
         return $result;
 
