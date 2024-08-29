@@ -4,5 +4,4 @@
     })
 </script>
 <template>
-    a
 </template>
