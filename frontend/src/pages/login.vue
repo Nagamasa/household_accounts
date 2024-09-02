@@ -8,7 +8,6 @@ import LoginForm from '@/components/organisms/LoginForm.vue';
     display: flex;
     justify-content: center;
     padding-top: 200px;
-    height: 100vh;
 }
 </style>
 
